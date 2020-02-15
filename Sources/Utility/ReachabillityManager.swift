@@ -16,11 +16,11 @@ public protocol ReachabilityManager {
 
 
 class DefaultReachabilityManager: ReachabilityManager {
-    public let reachable: CurrentValueSubject<Bool, Never> = CurrentValueSubject(true)
+    public let reachable: CurrentValueSubject<Bool, Never> = CurrentValueSubject(false)
     private let monitor = NWPathMonitor()
 
     public init() {
-        print("unfortunately it is not works on watchos normally so temporary it will be reacbable all the time")
+        print("unfortunately it is not works on watchos normally")
     }
 
     public func observeNetwork () {
