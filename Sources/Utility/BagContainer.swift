@@ -1,7 +1,7 @@
 import Combine
 
 
-public class BagContainer {
+open class BagContainer {
     public var cancellableBag: Set<AnyCancellable> = Set()
 
     deinit {
